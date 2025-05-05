@@ -38,38 +38,29 @@
         <p>&copy; 2025 Qzverso. Todos os direitos reservados.</p>   
     </footer>
   
-   <script>
-        document.getElementById("cadastroForm").addEventListener("submit", function(event) {
-            event.preventDefault(); // Impede o envio do formulário
-        
-            const senha = document.getElementById("senha").value;
-            const confirmarSenha = document.getElementById("confirmar_senha").value;
-        
-            if (senha !== confirmarSenha) {
-                document.getElementById("erro_senha").style.display = "block";
-            } else {
-                document.getElementById("erro_senha").style.display = "none";
-                // Simula cadastro e redireciona
-                window.location.href = "Qzversohome.html"; // Altere para o nome da sua página home
-            }
-     // Verifica se o formulário foi enviado
-    formulario.addEventListener("submit", function(event) 
-    {
-    if (senha !== confirmarSenha) 
-        {
-        event.preventDefault(); // Impede o envio do formulário
-        erroSenha.style.display = "none"; // Oculta a mensagem de erro
-    }
-    // Verifica se as senhas são iguais
+  <script>
+document.getElementById("cadastroForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Impede o envio do formulário
+    
+    const senha = document.getElementById("senha").value;
+    const confirmarSenha = document.getElementById("confirmar_senha").value;
+    const erroSenha = document.getElementById("erro_senha");
+    const mensagemSucesso = document.getElementById("mensagem_sucesso");
+
     if (senha !== confirmarSenha) {
-        event.preventDefault(); // Impede o envio do formulário
-        erroSenha.style.display = "block"; // Exibe a mensagem de erro
-    }
-    else {
-        erroSenha.style.display = "none"; // Oculta a mensagem de erro
+        erroSenha.style.display = "block";
+        mensagemSucesso.style.display = "none";
+    } else {
+        erroSenha.style.display = "none";
+        mensagemSucesso.style.display = "block";
+
+        // Simula redirecionamento para a home após o cadastro
+        setTimeout(function() {
+            window.location.href = "index.html";
+        }, 1500); // Espera 1.5 segundos para mostrar mensagem antes de redirecionar
     }
 });
-  </script>
+</script>
         </body>
 </html>
 <style>
