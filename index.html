@@ -28,6 +28,30 @@
     <footer>
         <p>&copy; 2025 Qzverso. Todos os direitos reservados.</p>   
     </footer>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("loginForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Impede o envio do formulário
+            const email = document.getElementById("email").value.trim();
+            const senha = document.getElementById("senha").value.trim();
+
+            if (email === "") {
+                alert("Por favor, insira seu e-mail.");
+                return;
+            }
+
+            if (senha === "") {
+                alert("Por favor, insira sua senha.");
+                return;
+            }
+
+            // Redireciona para a home (ajuste se necessário)
+            window.location.href = "home.html";
+        });
+    });
+</script>
+
     </body>
 </html>
 
@@ -127,23 +151,3 @@ footer {
     opacity: 0.8;
 }
 </style>
-
-<script>
-function redirecionar() {
-    const email = document.getElementById("email").value.trim(); // Corrigido o ID
-    const senha = document.getElementById("senha").value.trim();
-
-    if (email === "") {
-        alert("Por favor, insira seu e-mail.");
-        return;
-    }
-
-    if (senha === "") {
-        alert("Por favor, insira sua senha.");
-        return;
-    }
-
-    // Caminho relativo para a página principal do Qzverso
-    window.location.href = "home.html"; // ajuste esse caminho conforme sua estrutura de pastas
-}
-    </script>
