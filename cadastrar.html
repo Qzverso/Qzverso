@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Qzverso - Cadastro</title>
-    <link rel="stylesheet" href="cadastroqzverso.css">
 </head>
 
 <body>
@@ -28,13 +27,10 @@
             <!-- Mensagem de erro caso as senhas não coincidam -->
             <p id="erro_senha" style="color: red; display: none;">As senhas não coincidem!</p>
 
-
             <p><button type="submit">Cadastrar</button></p>
             
             <p id="mensagem_sucesso" style="color: rgb(156, 91, 7); display: none;">Cadastro realizado com sucesso!</p>
-
         </form>
-
         <p>Já tem uma conta? <a href="index.html" class="link-login">Faça login</a></p>
         <p>Ao se cadastrar, você concorda com nossos <a href="termos.html">Termos de Serviço</a> e <a href="privacidade.html">Política de Privacidade</a>.</p>
     </section>
@@ -42,8 +38,7 @@
         <p>&copy; 2025 Qzverso. Todos os direitos reservados.</p>   
     </footer>
   
-    <p><script src="cadastr.js"></script></p>
-    <script>
+   <script>
         document.getElementById("cadastroForm").addEventListener("submit", function(event) {
             event.preventDefault(); // Impede o envio do formulário
         
@@ -57,13 +52,7 @@
                 // Simula cadastro e redireciona
                 window.location.href = "Qzversohome.html"; // Altere para o nome da sua página home
             }
-          document.getElementById("cadastroForm").addEventListener("submit", function (event) {
-    let senha = document.getElementById("senha").value;
-    let confirmarSenha = document.getElementById("confirmar_senha").value;
-    let erroSenha = document.getElementById("erro_senha");
-    let formulario = document.getElementById("cadastroForm");
-
-    // Verifica se o formulário foi enviado
+     // Verifica se o formulário foi enviado
     formulario.addEventListener("submit", function(event) 
     {
     if (senha !== confirmarSenha) 
@@ -80,20 +69,7 @@
         erroSenha.style.display = "none"; // Oculta a mensagem de erro
     }
 });
-// cadastr.js
-document.getElementById("cadastroForm").addEventListener("submit", function(event) {
-    const senha = document.getElementById("senha").value;
-    const confirmarSenha = document.getElementById("confirmar_senha").value;
-
-    if (senha !== confirmarSenha) {
-        event.preventDefault(); // Impede o envio do formulário
-        document.getElementById("erro_senha").style.display = "block"; // Exibe a mensagem de erro
-    } else {
-        document.getElementById("erro_senha").style.display = "none"; // Oculta a mensagem de erro
-    }
-});
-        });
-        </script>
+  </script>
         </body>
 </html>
 <style>
