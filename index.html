@@ -130,12 +130,21 @@ footer {
 </style>
 
 <script>
-document.getElementById("loginForm").addEventListener("submit", function (event) {
-    event.preventDefault(); // Impede o envio do formulário
+function redirecionar() {
+    const email = document.getElementById("email").value.trim(); // Corrigido o ID
+    const senha = document.getElementById("senha").value.trim();
 
-    // Aqui você poderia validar o e-mail e senha (simples ou usando backend)
+    if (email === "") {
+        alert("Por favor, insira seu e-mail.");
+        return;
+    }
 
-    // Simulando login válido, redireciona para a página home
-    window.location.href = "home.html";
-});
+    if (senha === "") {
+        alert("Por favor, insira sua senha.");
+        return;
+    }
+
+    // Caminho relativo para a página principal do Qzverso
+    window.location.href = "home.html"; // ajuste esse caminho conforme sua estrutura de pastas
+}
     </script>
