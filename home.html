@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Qzverso - Plataforma de Histórias</title>
+    <link rel="stylesheet" href="StyleHome.css">
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo ao Qzverso</h1>
+        <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#">Qzverso</a></li>
+              <li><a href="#">Em Alta</a></li>
+              <li class="categoria-dropdown">
+                <a href="#">Fics por Categoria ▼</a>
+                <ul class="submenu">
+                  <li><a href="#"> Originais Qzverso</a></li>
+                  <li><a href="#"> Aventura</a></li>
+                  <li><a href="#">Mistério/Policial</a></li>
+                  <li><a href="#"> Comédia</a></li>
+                  <li><a href="#">✨ Fantasia </a></li>
+                  <li><a href="#">❤️ Romance </a></li>
+                  <li><a href="#">🚀 Ficção Científica</a></li>
+                </ul>
+              </li>
+              <li><a href="publicar.html">Publique sua história</a></li> <!-- Link para nova página -->
+            </ul>
+          </nav>
+    </header>
+    
+    <main>
+        <section id="home">
+            <h2>Descubra novas histórias</h2>
+            <p>Explore um universo de histórias criadas por autores incríveis.</p>
+        </section>
+        
+        <section id="categorias">
+            <section id="categorias">
+                <h2>Categorias</h2>
+                <p>Escolha seu gênero favorito e mergulhe em novas aventuras.</p>
+            
+                <div class="categoria-container">
+                    <div class="categoria-scroll">
+                        <div class="categoria-card">
+                            <img src="capa1.jpg" alt="Aventura">
+                            <p>🌍 Aventura</p>
+                        </div>
+                        <div class="categoria-card">
+                            <img src="capa2.jpg" alt="Mistério">
+                            <p>🔍 Mistério</p>
+                        </div>
+                        <div class="categoria-card">
+                            <img src="capa3.jpg" alt="Fantasia">
+                            <p>✨ Fantasia</p>
+                        </div>
+                        <div class="categoria-card">
+                            <img src="capa4.jpg" alt="Romance">
+                            <p>❤️ Romance</p>
+                        </div>
+                        <div class="categoria-card">
+                            <img src="capa5.jpg" alt="Ficção Científica">
+                            <p>🚀 Ficção Científica</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        <!-- Botão Perfil -->
+        <section id="Perfil">
+            <a href= "perfil.html"></a>
+            <button class="secondary">Perfil</button>
+            </a>          
+            <h2>Seu Perfil</h2>
+            <p>Gerencie suas histórias e configurações.</p>
+        </section>
+    </main>
+        <footer>
+          <p>&copy; 2025 Qzverso. Todos os direitos reservados.</p>
+    </footer>
+    
+    <script src="JSHome.js"></script>
+</body>
+</html>
+
+<style>
+  /* Estilos gerais */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  color: white;
+  text-align: center;
+}
+
+/* Estilos para o menu de navegação */
+nav {
+  background-color:#aa0e7b;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  display: block;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+nav ul li:hover > a {
+  background-color: #920c6a;
+  border-radius: 10px;
+}
+
+/* Dropdown */
+nav ul li ul {
+  display: none;
+  position: absolute;
+  background-color: #aa0e7b;
+  list-style: none;
+  top: 100%;
+  left: 0;
+  padding: 0;
+  width: 180px;
+  border-radius: 10px;
+}
+
+/* Dropdown das Categorias */
+.categoria-dropdown {
+  position: relative;
+}
+
+.categoria-dropdown ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #aa0e7b;
+  list-style: none;
+  padding: 0;
+  width: 180px;
+  border-radius: 10px;
+  z-index: 1000; /* Garante que fique acima de outros elementos */
+}
+
+.categoria-dropdown:hover ul {
+  display: block;
+}
+
+.categoria-dropdown ul li {
+  padding: 10px;
+}
+
+.categoria-dropdown ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 8px;
+}
+
+.categoria-dropdown ul li a:hover {
+  background-color: #9f34d4;
+  border-radius: 10px;
+}
+
+/* Avatar e Dropdown de usuário */
+.button-group {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
+
+.avatar img {
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: rgb(240, 239, 231);
+  box-shadow: 0px 4px 6px rgb(0, 0, 0);
+  width: 200px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.button-group:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu ul li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.dropdown-menu ul li a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  display: block;
+}
+
+.dropdown-menu ul li a:hover {
+  background-color: #f4f4f4;
+}
+
+/* Estilização de seções e formulários */
+main {
+  padding: 30px;
+}
+
+section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+input, select, textarea {
+  width: 80%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+button {
+  background-color: #aa0e7b;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #920c6a;
+}
+
+footer {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #aa0e7b;
+}
+/* Estilizando a seção de categorias */
+#categorias {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Container geral das categorias */
+.categoria-container {
+  overflow-x: auto;  /* Permite rolagem horizontal */
+  white-space: nowrap;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+/* Estilo do carrossel das categorias */
+.categoria-scroll {
+  display: flex;
+  gap: 15px;  /* Espaço entre os cards */
+}
+
+/* Cartões de categoria */
+.categoria-card {
+  background-color: #222;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  min-width: 180px;
+  max-width: 180px;
+  box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Imagem dentro do card */
+.categoria-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Texto dentro do card */
+.categoria-card p {
+  color: white;
+  font-size: 14px;
+  margin-top: 8px;
+}
+/* Remove a cor azul padrão dos links */
+.categoria-card {
+  text-decoration: none;  /* Remove o sublinhado */
+  color: white;  /* Mantém o texto branco */
+  transition: transform 0.2s ease-in-out; /* Efeito ao passar o mouse */
+}
+
+/* Efeito ao passar o mouse */
+.categoria-card:hover {
+  transform: scale(1.05); /* Dá um pequeno zoom */
+}
+
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    // Dropdown do menu principal
+    let dropdowns = document.querySelectorAll("nav ul li ul");
+    let menuItems = document.querySelectorAll("nav ul li a");
+    
+    menuItems.forEach(item => {
+        item.addEventListener("mouseenter", function () {
+            let submenu = this.nextElementSibling;
+            if (submenu && submenu.tagName === "UL") {
+                submenu.style.display = "block";
+            }
+        });
+    });
+    
+    document.addEventListener("click", function (event) {
+        dropdowns.forEach(dropdown => {
+            if (!dropdown.contains(event.target)) {
+                dropdown.style.display = "none";
+            }
+        });
+    });
+  
+    // Dropdown do usuário
+    let profileButton = document.querySelector("#profile-dropdown button");
+    let profileMenu = document.querySelector(".dropdown-menu");
+  
+    if (profileButton) {
+        profileButton.addEventListener("click", function (event) {
+            event.stopPropagation();
+            profileMenu.style.display = profileMenu.style.display === "block" ? "none" : "block";
+        });
+    }
+    
+    document.addEventListener("click", function () {
+        if (profileMenu) {
+            profileMenu.style.display = "none";
+        }
+    });
+  
+    // Exibir uma saudação com o username
+    let username = localStorage.getItem("username") || "Visitante";
+    let usernameDisplay = document.querySelector(".username");
+    if (usernameDisplay) {
+        usernameDisplay.textContent = username;
+    }
+  
+    // Adicionando animação suave ao menu dropdown
+    let dropdownMenus = document.querySelectorAll(".dropdown-menu");
+    dropdownMenus.forEach(menu => {
+        menu.style.transition = "opacity 0.3s ease, transform 0.3s ease";
+        menu.style.transform = "translateY(-10px)";
+        menu.style.opacity = "0";
+    });
+  
+    profileButton.addEventListener("click", function () {
+        if (profileMenu.style.display === "none" || profileMenu.style.opacity === "0") {
+            profileMenu.style.display = "block";
+            setTimeout(() => {
+                profileMenu.style.opacity = "1";
+                profileMenu.style.transform = "translateY(0)";
+            }, 10);
+        } else {
+            profileMenu.style.opacity = "0";
+            profileMenu.style.transform = "translateY(-10px)";
+            setTimeout(() => {
+                profileMenu.style.display = "none";
+            }, 300);
+        }
+    });
+  
+    // Exibição de subcategorias ao passar o mouse
+    let categoriaDropdowns = document.querySelectorAll(".categoria-dropdown");
+    
+    categoriaDropdowns.forEach(categoria => {
+        categoria.addEventListener("mouseenter", function () {
+            let subMenu = this.querySelector("ul");
+            if (subMenu) {
+                subMenu.style.display = "block";
+            }
+        });
+        
+        categoria.addEventListener("mouseleave", function () {
+            let subMenu = this.querySelector("ul");
+            if (subMenu) {
+                subMenu.style.display = "none";
+            }
+        });
+    });
+  });
+
+  import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Perfil from './Perfil';
+import Qzverso from './Qzverso';
+import EmAlta from './EmAlta';
+import Categorias from './Categorias';
+import Publicar from './Publicar';
+import Configuracoes from './Configuracoes';
+import './App.css';
+
+function App() {
+    const [tema, setTema] = useState('claro');
+
+    const mudarTema = (novoTema) => {
+        setTema(novoTema);
+    };
+
+    return (
+        <Router>
+            <div className={`app ${tema}`}>
+                <nav>
+                    <ul>
+                        <li><Link to="/perfil">Perfil</Link></li>
+                        <li><Link to="/qzverso">Qzverso</Link></li>
+                        <li><Link to="/em-alta">Em Alta</Link></li>
+                        <li><Link to="/categorias">Fics por Categorias</Link></li>
+                        <li><Link to="/publicar">Publique sua História</Link></li>
+                        <li><Link to="/configuracoes">Configurações</Link></li>
+                    </ul>
+                </nav>
+                <Routes>
+                    <Route path="/perfil" element={<Perfil />} />
+                    <Route path="/qzverso" element={<Qzverso />} />
+                    <Route path="/em-alta" element={<EmAlta />} />
+                    <Route path="/categorias" element={<Categorias />} />
+                    <Route path="/publicar" element={<Publicar />} />
+                    <Route path="/configuracoes" element={<Configuracoes mudarTema={mudarTema} />} />
+                </Routes>
+            </div>
+        </Router>
+    );
+}
+function scrollDireita(id) {
+    document.getElementById(id).scrollBy({ left: 300, behavior: "smooth" });
+}
+
+function scrollEsquerda(id) {
+    document.getElementById(id).scrollBy({ left: -300, behavior: "smooth" });
+} 
+</script>
