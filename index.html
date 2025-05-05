@@ -29,9 +29,9 @@
     <footer>
         <p>&copy; 2025 Qzverso. Todos os direitos reservados.</p>   
     </footer>
-    <script src="qzversologin.js"></script>
-</body>
+    </body>
 </html>
+
 <style>
 body{
     background-color: #000;
@@ -128,3 +128,14 @@ footer {
     opacity: 0.8;
 }
 </style>
+
+<script>
+document.getElementById("loginForm").addEventListener("submit", function (event) {
+    event.preventDefault(); // Impede o envio do formulário
+
+    // Aqui você poderia validar o e-mail e senha (simples ou usando backend)
+
+    // Simulando login válido, redireciona para a página home
+    window.location.href = "home.html";
+});
+    </script>
