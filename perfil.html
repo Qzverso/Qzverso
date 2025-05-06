@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil | Qzverso</title>
-    
-    <link rel="stylesheet" href="style.css">
-    
+  
+    <link rel="stylesheet" href="perfilStyle.css">
+  
 </head>
 <body>
     <header>
@@ -45,8 +45,9 @@
         <p>&copy; 2025 Qzverso. Todos os direitos reservados.</p>
     </footer>
 
+
     <script
-      document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function () {
     const fotoUpload = document.getElementById("foto-upload");
     const fotoPreview = document.getElementById("foto-preview");
     const perfilForm = document.getElementById("perfil-form");
@@ -83,14 +84,15 @@
         localStorage.setItem("dataNascimento", document.getElementById("data-nascimento").value);
         alert("Perfil salvo com sucesso!");
     });
-   
+});
+
       </script>
         
 </body>
 </html>
 
 <style>
-  /* Importando a fonte Poppins */
+ /* Importando a fonte Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 body {
@@ -176,4 +178,5 @@ footer {
     font-size: 14px;
     color: #999;
 }
+
 </style>
