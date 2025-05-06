@@ -1,476 +1,262 @@
 <!DOCTYPE html>
-<html lang="pt-br"> 
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8"> 
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>Qzverso - Plataforma de Histórias</title>
-    <link rel="stylesheet" href="style.css">  
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>Bem-vindo ao Qzverso</h1>
         <nav>
             <ul>
-              <li><a href="home.html">Home</a></li>
-              <li><a href="qzverso.html">Qzverso</a></li>
-              <li><a href="emalta.html">Em Alta</a></li>
-              <li><a href="escrever.html">Escrever</a></li>
-                
-<li class="dropdown categoria-dropdown">
-  <button id="mostrar-categorias">Fics por categoria▼</button>
-<div id="lista-categorias" style="display: none;">
-  <!-- categorias aqui -->
-</div>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="qzverso.html">Qzverso</a></li>
+                <li><a href="emalta.html">Em Alta</a></li>
+                <li><a href="escrever.html">Escrever</a></li>
 
-  <ul>
-    <li><a href="/categoria/aventura">Aventura</a></li>
-    <li><a href="/categoria/romance">Romance</a></li>
-    <li><a href="/categoria/drama">Drama</a></li>
-    <li><a href="/categoria/ficcao">Ficção Científica</a></li>
-    <li><a href="/categoria/comedia">Comédia</a></li>
-    <li><a href="/categoria/fantasia">Fantasia</a></li>
-    <li><a href="/categoria/acao/misterio">Ação/Mistério</a></li>
-  </ul>
-</li>
-                    
-  </nav>
- </header>
- <main>
+                <li class="dropdown categoria-dropdown">
+                    <button id="mostrar-categorias">Fics por categoria▼</button>
+                    <div id="lista-categorias" class="categoria-lista">
+                        <ul>
+                            <li><a href="/categoria/aventura">Aventura</a></li>
+                            <li><a href="/categoria/romance">Romance</a></li>
+                            <li><a href="/categoria/drama">Drama</a></li>
+                            <li><a href="/categoria/ficcao">Ficção Científica</a></li>
+                            <li><a href="/categoria/comedia">Comédia</a></li>
+                            <li><a href="/categoria/fantasia">Fantasia</a></li>
+                            <li><a href="/categoria/acao/misterio">Ação/Mistério</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
         <section id="home">
             <h2>Descubra novas histórias</h2>
             <p>Explore um universo de histórias criadas por autores incríveis.</p>
         </section>
-        
+
         <section id="categorias">
-         <h2>Categorias</h2>
-        </section>  
-     
-         <p>Escolha seu gênero favorito e mergulhe em novas aventuras.</p>
-            
-                <div class="categoria-container">
-                    <div class="categoria-scroll">
-                        <div class="categoria-card">
-                            <img src="capa1.jpg" alt="Aventura">
-                            <p>Aventura</p>
-                        </div>
-                        <div class="categoria-card">
-                            <img src="capa2.jpg" alt="Mistério">
-                            <p>Mistério</p>
-                        </div>
-                        <div class="categoria-card">
-                            <img src="capa3.jpg" alt="Fantasia">
-                            <p>Fantasia</p>
-                        </div>
-                        <div class="categoria-card">
-                            <img src="capa4.jpg" alt="Romance">
-                            <p>Romance</p>
-                        </div>
-                        <div class="categoria-card">
-                            <img src="capa5.jpg" alt="Ficção Científica">
-                            <p>Ficção Científica</p>
-                        </div>
-                        <div class="categoria-card">
-                            <img src="capa5.jpg" alt="Comédia">
-                            <p>Comédia</p>
-                        </div>
+            <h2>Categorias</h2>
+            <p>Escolha seu gênero favorito e mergulhe em novas aventuras.</p>
+            <div class="categoria-container">
+                <div class="categoria-scroll">
+                    <div class="categoria-card">
+                        <img src="capa1.jpg" alt="Aventura">
+                        <p>Aventura</p>
+                    </div>
+                    <div class="categoria-card">
+                        <img src="capa2.jpg" alt="Mistério">
+                        <p>Mistério</p>
+                    </div>
+                    <div class="categoria-card">
+                        <img src="capa3.jpg" alt="Fantasia">
+                        <p>Fantasia</p>
+                    </div>
+                    <div class="categoria-card">
+                        <img src="capa4.jpg" alt="Romance">
+                        <p>Romance</p>
+                    </div>
+                    <div class="categoria-card">
+                        <img src="capa5.jpg" alt="Ficção Científica">
+                        <p>Ficção Científica</p>
+                    </div>
+                    <div class="categoria-card">
+                        <img src="capa5.jpg" alt="Comédia">
+                        <p>Comédia</p>
                     </div>
                 </div>
-            </section>
-            
-        <!-- Botão Perfil -->
-       <section id="Perfil">
-    <a href="perfil.html">
-        <button class="secondary">Perfil</button>
-    </a>
-    <h2>Seu Perfil</h2>
-    <p>Gerencie suas histórias e configurações.</p>
-</section>
+            </div>
+        </section>
 
+        <section id="Perfil">
+            <a href="perfil.html">
+                <button class="secondary">Perfil</button>
+            </a>
+            <h2>Seu Perfil</h2>
             <p>Gerencie suas histórias e configurações.</p>
-      
+        </section>
     </main>
-    
-        <footer>
-          <p>&copy; 2025 Qzverso. Todos os direitos reservados.</p>
+
+    <footer>
+        <p>&copy; 2025 Qzverso. Todos os direitos reservados.</p>
     </footer>
 
-<script>
-// Lógica para expandir/recolher a lista de categorias
+    <script>
+        // Lógica para expandir/recolher a lista de categorias
 document.getElementById("mostrar-categorias").addEventListener("click", function () {
     const lista = document.getElementById("lista-categorias");
-    lista.style.display = lista.style.display === "none" ? "block" : "none";
+    lista.style.display = lista.style.display === "none" || lista.style.display === "" ? "block" : "none";
 });
 
-// Dropdown do menu principal
-let dropdowns = document.querySelectorAll("nav ul li ul");
-let menuItems = document.querySelectorAll("nav ul li a");
-
-menuItems.forEach(item => {
-    item.addEventListener("mouseenter", function () {
-        let submenu = this.nextElementSibling;
-        if (submenu && submenu.tagName === "UL") {
-            submenu.style.display = "block";
-        }
-    });
-});
-
-// Fecha os submenus e categorias ao clicar fora
+// Fechar o dropdown ao clicar fora
 document.addEventListener("click", function (event) {
-    dropdowns.forEach(dropdown => {
-        if (!dropdown.contains(event.target) && !event.target.closest('#mostrar-categorias')) {
-            dropdown.style.display = "none";
-        }
-    });
-
     const listaCategorias = document.getElementById("lista-categorias");
     if (!listaCategorias.contains(event.target) && !event.target.closest('#mostrar-categorias')) {
         listaCategorias.style.display = "none";
     }
 });
 
-// Dropdown do usuário
-let profileButton = document.querySelector("#profile-dropdown button");
-let profileMenu = document.querySelector(".dropdown-menu");
-
-if (profileButton && profileMenu) {
-    profileButton.addEventListener("click", function (event) {
-        event.stopPropagation();
-
-        if (profileMenu.style.display === "none" || !profileMenu.style.display) {
-            profileMenu.style.display = "block";
-            profileMenu.style.opacity = "1";
-            profileMenu.style.transform = "translateY(0)";
-        } else {
-            profileMenu.style.opacity = "0";
-            profileMenu.style.transform = "translateY(-10px)";
-            setTimeout(() => {
-                profileMenu.style.display = "none";
-            }, 300);
-        }
-    });
-
-    profileMenu.style.transition = "opacity 0.3s ease, transform 0.3s ease";
-    profileMenu.style.transform = "translateY(-10px)";
-    profileMenu.style.opacity = "0";
-    profileMenu.style.display = "none";
-
-    document.addEventListener("click", function () {
-        profileMenu.style.opacity = "0";
-        profileMenu.style.transform = "translateY(-10px)";
-        setTimeout(() => {
-            profileMenu.style.display = "none";
-        }, 300);
-    });
-}
-
-// Saudação com username
-let username = localStorage.getItem("username") || "Visitante";
-let usernameDisplay = document.querySelector(".username");
-if (usernameDisplay) {
-    usernameDisplay.textContent = username;
-}
-
-// Subcategorias ao passar o mouse
-let categoriaDropdowns = document.querySelectorAll(".categoria-dropdown");
-
-categoriaDropdowns.forEach(categoria => {
-    categoria.addEventListener("mouseenter", function () {
-        let subMenu = this.querySelector("ul");
-        if (subMenu) {
-            subMenu.style.display = "block";
-        }
-    });
-
-    categoria.addEventListener("mouseleave", function () {
-        let subMenu = this.querySelector("ul");
-        if (subMenu) {
-            subMenu.style.display = "none";
-        }
-    });
-});
-
-// Scroll para carrossel de categorias
-function scrollDireita(id) {
-    const el = document.getElementById(id);
-    if (el) {
-        el.scrollBy({ left: 300, behavior: "smooth" });
-    }
-}
-
-function scrollEsquerda(id) {
-    const el = document.getElementById(id);
-    if (el) {
-        el.scrollBy({ left: -300, behavior: "smooth" });
-    }
-}
-</script>
-
+    </script>
 </body>
 </html>
 
 <style>
-  /* Estilos gerais */
+/* Estilos gerais */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #000000;
-  color: white;
-  text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: white;
+    text-align: center;
 }
 
 /* Estilos para o menu de navegação */
 nav {
-  background-color:#aa0e7b;
-  padding: 10px 0;
+    background-color: #aa0e7b;
+    padding: 10px 0;
 }
 
 nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-  position: relative;
+    position: relative;
 }
 
 nav ul li a {
-  text-decoration: none;
-  color: white;
-  padding: 10px 20px;
-  display: block;
-  border-radius: 10px;
-  transition: 0.3s;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    display: block;
+    border-radius: 10px;
+    transition: 0.3s;
 }
 
 nav ul li:hover > a {
-  background-color: #920c6a;
-  border-radius: 10px;
+    background-color: #920c6a;
+    border-radius: 10px;
 }
 
-/* Dropdown */
-nav ul li ul {
-  display: none;
-  position: absolute;
-  background-color: hsl(318, 85%, 36%);
-  list-style: none;
-  top: 100%;
-  left: 0;
-  padding: 0;
-  width: 180px;
-  border-radius: 10px;
-}
-.dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f1f1f1;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-      z-index: 1;
-    }
-
-    .dropdown-content a {
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-    }
-
-    .dropdown-content a:hover {background-color: #ddd;}
-/* Dropdown das Categorias */
+/* Dropdown de categorias */
 .categoria-dropdown {
-  position: relative;
-  display: inline-block;
+    position: relative;
+    display: inline-block;
 }
 
-.categoria-dropdown .dropbtn {
-  background-color:  hsl(0, 0%, 100%);
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
+#lista-categorias {
+    display: none;
+    position: absolute;
+    background-color: hsl(318, 85%, 36%);
+    min-width: 160px;
+    z-index: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
 }
 
-.categoria-dropdown ul {
-  display: none;
-  position: absolute;
-  background-color:hsl(318, 85%, 36%);
-  min-width: 160px;
-  z-index: 1;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+.categoria-dropdown:hover #lista-categorias {
+    display: block;
 }
 
-.categoria-dropdown ul li a:hover {
-  background-color: hsl(318, 85%, 26%);
-  color: white;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+.categoria-lista ul {
+    padding: 0;
+    margin: 0;
 }
 
-.categoria-dropdown:hover ul {
-  display: block;
+.categoria-lista ul li a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: white;
 }
 
-.categoria-dropdown ul li a:hover {
-  background-color: hsl(0, 0%, 100%);
+.categoria-lista ul li a:hover {
+    background-color: hsl(0, 0%, 100%);
 }
 
-
-/* Avatar e Dropdown de usuário */
-.button-group {
-  position: absolute;
-  right: 20px;
-  top: 10px;
-}
-
-.avatar img {
-  border-radius: 50%;
-  border: 2px solid white;
-}
-
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  right: 0;
-  background-color: rgb(240, 239, 231);
-  box-shadow: 0px 4px 6px rgb(0, 0, 0);
-  width: 200px;
-  border-radius: 5px;
-  padding: 10px;
-}
-
-.button-group:hover .dropdown-menu {
-  display: block;
-}
-
-.dropdown-menu ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.dropdown-menu ul li {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
-}
-
-.dropdown-menu ul li a {
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-  display: block;
-}
-
-.dropdown-menu ul li a:hover {
-  background-color: #f4f4f4;
-}
-
-/* Estilização de seções e formulários */
+/* Estilizando seções e formulários */
 main {
-  padding: 30px;
+    padding: 30px;
 }
 
 section {
-  margin-bottom: 30px;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
-}
-
-input, select, textarea {
-  width: 80%;
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-}
-
-button {
-  background-color: #aa0e7b;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-button:hover {
-  background-color: #920c6a;
-}
-
-footer {
-  margin-top: 30px;
-  padding: 20px;
-  background-color: #aa0e7b;
-}
-/* Estilizando a seção de categorias */
-#categorias {
-  text-align: center;
-  padding: 20px;
-}
-
-/* Container geral das categorias */
+/* Carrossel de categorias */
 .categoria-container {
-  overflow-x: auto;  /* Permite rolagem horizontal */
-  white-space: nowrap;
-  padding: 10px;
-  margin-top: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px;
+    margin-top: 10px;
 }
 
-/* Estilo do carrossel das categorias */
 .categoria-scroll {
-  display: flex;
-  gap: 15px;  /* Espaço entre os cards */
+    display: flex;
+    gap: 15px;
 }
 
-/* Cartões de categoria */
 .categoria-card {
-  background-color: #222;
-  border-radius: 10px;
-  padding: 10px;
-  text-align: center;
-  min-width: 180px;
-  max-width: 180px;
-  box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.1);
+    background-color: #222;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    min-width: 180px;
+    max-width: 180px;
+    box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.1);
 }
 
-/* Imagem dentro do card */
 .categoria-card img {
-  width: 100%;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 5px;
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 5px;
 }
 
-/* Texto dentro do card */
 .categoria-card p {
-  color: white;
-  font-size: 14px;
-  margin-top: 8px;
-}
-/* Remove a cor azul padrão dos links */
-.categoria-card {
-  text-decoration: none;  /* Remove o sublinhado */
-  color: white;  /* Mantém o texto branco */
-  transition: transform 0.2s ease-in-out; /* Efeito ao passar o mouse */
+    color: white;
+    font-size: 14px;
+    margin-top: 8px;
 }
 
-/* Efeito ao passar o mouse */
 .categoria-card:hover {
-  transform: scale(1.05); /* Dá um pequeno zoom */
+    transform: scale(1.05);
 }
 
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .categoria-scroll {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .categoria-card {
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .categoria-lista {
+        display: block;
+        position: static;
+    }
+}
 </style>
