@@ -18,16 +18,19 @@
               <li><a href="escrever.html">Escrever</a></li>
                 
 <li class="dropdown categoria-dropdown">
-    <button class="dropbtn">Fics por Categoria ▼</button>
-    <ul>
-        <li><a href="/categoria/aventura">Aventura</a></li>
-        <li><a href="/categoria/romance">Romance</a></li>
-        <li><a href="/categoria/drama">Drama</a></li>
-        <li><a href="/categoria/ficcao">Ficção Científica</a></li>
-        <li><a href="/categoria/comedia">Comédia</a></li>
-        <li><a href="/categoria/fantasia">Fantasia</a></li>
-        <li><a href="/categoria/acao/misterio">Ação/Mistério</a></li>
-   </ul>
+  <button class="dropbtn">Fics por Categoria ▼</button>
+  <ul>
+    <li><a href="/categoria/aventura">Aventura</a></li>
+    <li><a href="/categoria/romance">Romance</a></li>
+    <li><a href="/categoria/drama">Drama</a></li>
+    <li><a href="/categoria/ficcao">Ficção Científica</a></li>
+    <li><a href="/categoria/comedia">Comédia</a></li>
+    <li><a href="/categoria/fantasia">Fantasia</a></li>
+    <li><a href="/categoria/acao/misterio">Ação/Mistério</a></li>
+  </ul>
+</li>
+
+
                      
   </nav>
  </header>
@@ -254,40 +257,43 @@ nav ul li ul {
 /* Dropdown das Categorias */
 .categoria-dropdown {
   position: relative;
+  display: inline-block;
+}
+
+.categoria-dropdown .dropbtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
 }
 
 .categoria-dropdown ul {
   display: none;
   position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #aa0e7b;
+  background-color: #fff;
+  min-width: 160px;
+  z-index: 1;
   list-style: none;
   padding: 0;
-  width: 180px;
-  border-radius: 10px;
-  z-index: 1000; /* Garante que fique acima de outros elementos */
+  margin: 0;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+}
+
+.categoria-dropdown ul li a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
 
 .categoria-dropdown:hover ul {
   display: block;
 }
 
-.categoria-dropdown ul li {
-  padding: 10px;
-}
-
-.categoria-dropdown ul li a {
-  color: white;
-  text-decoration: none;
-  display: block;
-  padding: 8px;
-}
-
 .categoria-dropdown ul li a:hover {
-  background-color: #9f34d4;
-  border-radius: 10px;
+  background-color: #f1f1f1;
 }
+
 
 /* Avatar e Dropdown de usuário */
 .button-group {
