@@ -117,8 +117,6 @@ menuItems.forEach(item => {
             submenu.style.display = "block";
         }
     });
-});
-
 // Fecha os submenus ao clicar fora deles
 document.addEventListener("click", function (event) {
     dropdowns.forEach(dropdown => {
@@ -193,9 +191,6 @@ document.addEventListener("click", function (event) {
                 subMenu.style.display = "none";
             }
         });
-    });
-});
-
 // Scroll para carrossel de categorias
 function scrollDireita(id) {
     const el = document.getElementById(id);
@@ -209,7 +204,8 @@ function scrollEsquerda(id) {
     if (el) {
         el.scrollBy({ left: -300, behavior: "smooth" });
     }
-}
+});
+        
 </script>
 
 </body>
