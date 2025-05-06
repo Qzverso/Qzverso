@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publique sua História | Qzverso</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Publique sua História</h1>
+    </header>
+
+    <main class="publicacao-container">
+        <!-- Upload da Capa -->
+        <label for="capa-upload" class="capa-label">📷 Enviar Capa</label>
+        <input type="file" id="capa-upload" accept="image/*" hidden>
+        <img id="capa-preview" src="placeholder.jpg" alt="Prévia da Capa">
+
+        <!-- Título da História -->
+        <input type="text" id="titulo" placeholder="Digite o título da sua história...">
+
+        <!-- Seleção de Categoria -->
+        <select id="categoria">
+            <option value="">Selecione uma Categoria</option>
+            <option value="fantasia">Fantasia</option>
+            <option value="Mistério/Policial">Mistério/Policial </option>
+            <option value="romance">Romance</option>
+            <option value="sci-fi">Ficção Científica</option>
+            <option value="sci-fi">Comédia</option>
+        </select>
+
+        <!-- Editor de Texto -->
+        <textarea id="editor" placeholder="Escreva sua história aqui..."></textarea>
+
+        <!-- Botões -->
+        <div class="botoes">
+            <button onclick="importarArquivo()">Importar (Word/PDF)</button>
+            <button onclick="exportarArquivo()">Exportar</button>
+            <button onclick="salvarCapitulo()">Salvar Capítulo</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Qzverso. Todos os direitos reservados.</p>
+    </footer>
+  
+    <script>
+    // Exibir a prévia da capa ao fazer upload
+document.getElementById("capa-upload").addEventListener("change", function(event) {
+  const file = event.target.files[0];
+  if (file) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+          document.getElementById("capa-preview").src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+  }
+});
+
+// Simulação de salvamento automático
+let editor = document.getElementById("editor");
+editor.addEventListener("input", function() {
+  localStorage.setItem("historiaDraft", editor.value);
+});
+
+window.onload = function() {
+  if (localStorage.getItem("historiaDraft")) {
+      editor.value = localStorage.getItem("historiaDraft");
+  }
+};
+
+// Simulação do "Ctrl + Z" (Desfazer)
+editor.addEventListener("keydown", function(event) {
+  if (event.ctrlKey && event.key === "z") {
+      document.execCommand("undo");
+  }
+});
+
+// Função para importar arquivos (Word/PDF) — (Precisa ser implementada)
+function importarArquivo() {
+  alert("Funcionalidade de importação ainda em desenvolvimento...");
+}
+
+// Função para exportar história
+function exportarArquivo() {
+  const blob = new Blob([editor.value], { type: "text/plain" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "MinhaHistoria.txt";
+  a.click();
+}
+
+// Simulação do botão de salvar capítulo
+function salvarCapitulo() {
+  alert("Capítulo salvo com sucesso!");
+}
+
+      </script>
+  
+</body>
+</html>
