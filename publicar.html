@@ -81,7 +81,21 @@ editor.addEventListener("keydown", function(event) {
 
 // Função para importar arquivos (Word/PDF) — (Precisa ser implementada)
 function importarArquivo() {
-  alert("Funcionalidade de importação ainda em desenvolvimento...");
+  const input = document.createElement("input");
+  input.type = "file";
+  input.accept = ".doc,.docx,.pdf"; // Aceita arquivos Word e PDF
+  input.onchange = function(event) {
+      const file = event.target.files[0];
+      if (file) {
+          const reader = new FileReader();
+          reader.onload = function(e) {
+              // Aqui você pode processar o arquivo e adicionar o conteúdo ao editor
+              editor.value += e.target.result; // Simulação de adição de conteúdo
+          };
+          reader.readAsText(file); // Para arquivos de texto, ajuste conforme necessário
+      }
+  };
+  input.click();  
 }
 
 // Função para exportar história
