@@ -95,12 +95,10 @@
           <p>&copy; 2025 Qzverso. Todos os direitos reservados.</p>
     </footer>
 
-    <script>
-
+<script>
 // Lógica para expandir/recolher a lista de categorias
-document.getElementById("mostrar-categorias").addEventListener("click", function() {
+document.getElementById("mostrar-categorias").addEventListener("click", function () {
     const lista = document.getElementById("lista-categorias");
-    // Recolhe ou expande o dropdown das categorias
     lista.style.display = lista.style.display === "none" ? "block" : "none";
 });
 
@@ -115,7 +113,9 @@ menuItems.forEach(item => {
             submenu.style.display = "block";
         }
     });
-// Fecha os submenus ao clicar fora deles
+});
+
+// Fecha os submenus e categorias ao clicar fora
 document.addEventListener("click", function (event) {
     dropdowns.forEach(dropdown => {
         if (!dropdown.contains(event.target) && !event.target.closest('#mostrar-categorias')) {
@@ -123,72 +123,73 @@ document.addEventListener("click", function (event) {
         }
     });
 
-    // Fecha o menu de categorias ao clicar fora dele
     const listaCategorias = document.getElementById("lista-categorias");
     if (!listaCategorias.contains(event.target) && !event.target.closest('#mostrar-categorias')) {
         listaCategorias.style.display = "none";
     }
 });
-    // Dropdown do usuário
-    let profileButton = document.querySelector("#profile-dropdown button");
-    let profileMenu = document.querySelector(".dropdown-menu");
 
-    if (profileButton && profileMenu) {
-        profileButton.addEventListener("click", function (event) {
-            event.stopPropagation();
+// Dropdown do usuário
+let profileButton = document.querySelector("#profile-dropdown button");
+let profileMenu = document.querySelector(".dropdown-menu");
 
-            if (profileMenu.style.display === "none" || !profileMenu.style.display) {
-                profileMenu.style.display = "block";
-                profileMenu.style.opacity = "1";
-                profileMenu.style.transform = "translateY(0)";
-            } else {
-                profileMenu.style.opacity = "0";
-                profileMenu.style.transform = "translateY(-10px)";
-                setTimeout(() => {
-                    profileMenu.style.display = "none";
-                }, 300);
-            }
-        });
+if (profileButton && profileMenu) {
+    profileButton.addEventListener("click", function (event) {
+        event.stopPropagation();
 
-        // Animações suaves
-        profileMenu.style.transition = "opacity 0.3s ease, transform 0.3s ease";
-        profileMenu.style.transform = "translateY(-10px)";
-        profileMenu.style.opacity = "0";
-        profileMenu.style.display = "none";
-
-        document.addEventListener("click", function () {
+        if (profileMenu.style.display === "none" || !profileMenu.style.display) {
+            profileMenu.style.display = "block";
+            profileMenu.style.opacity = "1";
+            profileMenu.style.transform = "translateY(0)";
+        } else {
             profileMenu.style.opacity = "0";
             profileMenu.style.transform = "translateY(-10px)";
             setTimeout(() => {
                 profileMenu.style.display = "none";
             }, 300);
-        });
-    }
+        }
+    });
 
-    // Saudação com username
-    let username = localStorage.getItem("username") || "Visitante";
-    let usernameDisplay = document.querySelector(".username");
-    if (usernameDisplay) {
-        usernameDisplay.textContent = username;
-    }
+    profileMenu.style.transition = "opacity 0.3s ease, transform 0.3s ease";
+    profileMenu.style.transform = "translateY(-10px)";
+    profileMenu.style.opacity = "0";
+    profileMenu.style.display = "none";
 
-    // Subcategorias ao passar o mouse
-    let categoriaDropdowns = document.querySelectorAll(".categoria-dropdown");
+    document.addEventListener("click", function () {
+        profileMenu.style.opacity = "0";
+        profileMenu.style.transform = "translateY(-10px)";
+        setTimeout(() => {
+            profileMenu.style.display = "none";
+        }, 300);
+    });
+}
 
-    categoriaDropdowns.forEach(categoria => {
-        categoria.addEventListener("mouseenter", function () {
-            let subMenu = this.querySelector("ul");
-            if (subMenu) {
-                subMenu.style.display = "block";
-            }
-        });
+// Saudação com username
+let username = localStorage.getItem("username") || "Visitante";
+let usernameDisplay = document.querySelector(".username");
+if (usernameDisplay) {
+    usernameDisplay.textContent = username;
+}
 
-        categoria.addEventListener("mouseleave", function () {
-            let subMenu = this.querySelector("ul");
-            if (subMenu) {
-                subMenu.style.display = "none";
-            }
-        });
+// Subcategorias ao passar o mouse
+let categoriaDropdowns = document.querySelectorAll(".categoria-dropdown");
+
+categoriaDropdowns.forEach(categoria => {
+    categoria.addEventListener("mouseenter", function () {
+        let subMenu = this.querySelector("ul");
+        if (subMenu) {
+            subMenu.style.display = "block";
+        }
+    });
+
+    categoria.addEventListener("mouseleave", function () {
+        let subMenu = this.querySelector("ul");
+        if (subMenu) {
+            subMenu.style.display = "none";
+        }
+    });
+});
+
 // Scroll para carrossel de categorias
 function scrollDireita(id) {
     const el = document.getElementById(id);
@@ -202,8 +203,7 @@ function scrollEsquerda(id) {
     if (el) {
         el.scrollBy({ left: -300, behavior: "smooth" });
     }
-});
-        
+}
 </script>
 
 </body>
@@ -264,7 +264,23 @@ nav ul li ul {
   width: 180px;
   border-radius: 10px;
 }
+.dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
 
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {background-color: #ddd;}
 /* Dropdown das Categorias */
 .categoria-dropdown {
   position: relative;
