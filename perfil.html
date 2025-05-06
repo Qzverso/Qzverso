@@ -47,8 +47,8 @@
         <p>&copy; 2025 Qzverso. Todos os direitos reservados.</p>
     </footer>
 
-    <script
-    document.addEventListener("DOMContentLoaded", function () {
+   <script>
+document.addEventListener("DOMContentLoaded", function () {
     const fotoUpload = document.getElementById("foto-upload");
     const fotoPreview = document.getElementById("foto-preview");
     const perfilForm = document.getElementById("perfil-form");
@@ -75,7 +75,8 @@
             };
             reader.readAsDataURL(file);
         }
-  
+    });
+
     // Salvar dados do perfil
     perfilForm.addEventListener("submit", function (event) {
         event.preventDefault();
@@ -85,8 +86,8 @@
         alert("Perfil salvo com sucesso!");
     });
 });
+</script>
 
-      </script>
         
 </body>
 </html>
