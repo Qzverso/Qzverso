@@ -99,12 +99,28 @@ function importarArquivo() {
 
 // Função para exportar história
 function exportarArquivo() {
-  const blob = new Blob([editor.value], { type: "text/plain" });
+  const editorTexto = document.getElementById("editor").value;
+  const titulo = document.getElementById("titulo").value;
+  const capaSrc = document.getElementById("capa-preview").src;
+
+  const conteudoHTML = `
+    <html>
+      <head><title>${titulo}</title></head>
+      <body>
+        <h1>${titulo}</h1>
+        <img src="${capaSrc}" alt="Capa" style="width:200px;height:300px;border-radius:10px;"><br><br>
+        <p>${editorTexto.replace(/\n/g, "<br>")}</p>
+      </body>
+    </html>
+  `;
+
+  const blob = new Blob([conteudoHTML], { type: "text/html" });
   const a = document.createElement("a");
   a.href = URL.createObjectURL(blob);
-  a.download = "MinhaHistoria.txt";
+  a.download = `${titulo || "MinhaHistoria"}.html`;
   a.click();
 }
+
 
 // Simulação do botão de salvar capítulo
 function salvarCapitulo() {
