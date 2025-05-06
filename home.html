@@ -7,8 +7,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Bem-vindo ao Qzverso</h1>
+    <header class="site-header">
+    <div class="logo-container">
+        <img src="qzverso.jpg" alt="Logo Qzverso" class="logo">
+        <div class="titulo">
+            <h1>Bem-vindo ao Qzverso</h1>
         <nav>
             <ul>
                 <li><a href="home.html">Home</a></li>
@@ -127,6 +130,7 @@ nav ul li a {
     display: block;
     border-radius: 10px;
     transition: 0.3s;
+    background-color:hsl(318, 85%, 36%);
 }
 
 nav ul li:hover > a {
@@ -245,6 +249,39 @@ section {
         display: block;
         position: static;
     }
+    /* Header com logo e título lado a lado */
+.site-header {
+  background-color: #aa0e7b;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* Para responsividade */
+  gap: 20px;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+}
+
+.titulo h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.titulo p {
+  margin: 10px 0 0;
+  font-size: 16px;
+  color: #f0f0f0;
+}
+
 }
 
 </style>
