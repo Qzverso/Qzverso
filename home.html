@@ -86,24 +86,10 @@
         <p>&copy; 2025 Qzverso. Todos os direitos reservados.</p>
     </footer>
 
-    <script>
-        // Lógica para expandir/recolher a lista de categorias
-document.getElementById("mostrar-categorias").addEventListener("click", function () {
-    const lista = document.getElementById("lista-categorias");
-    lista.style.display = lista.style.display === "none" || lista.style.display === "" ? "block" : "none";
-});
-
-// Fechar o dropdown ao clicar fora
-document.addEventListener("click", function (event) {
-    const listaCategorias = document.getElementById("lista-categorias");
-    if (!listaCategorias.contains(event.target) && !event.target.closest('#mostrar-categorias')) {
-        listaCategorias.style.display = "none";
-    }
-});
-
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
+
 
 <style>
 /* Estilos gerais */
