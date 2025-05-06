@@ -99,31 +99,40 @@
 
     <script>
 
+// Lógica para expandir/recolher a lista de categorias
 document.getElementById("mostrar-categorias").addEventListener("click", function() {
     const lista = document.getElementById("lista-categorias");
+    // Recolhe ou expande o dropdown das categorias
     lista.style.display = lista.style.display === "none" ? "block" : "none";
 });
-    // Dropdown do menu principal
-    let dropdowns = document.querySelectorAll("nav ul li ul");
-    let menuItems = document.querySelectorAll("nav ul li a");
 
-    menuItems.forEach(item => {
-        item.addEventListener("mouseenter", function () {
-            let submenu = this.nextElementSibling;
-            if (submenu && submenu.tagName === "UL") {
-                submenu.style.display = "block";
-            }
-        });
+// Dropdown do menu principal
+let dropdowns = document.querySelectorAll("nav ul li ul");
+let menuItems = document.querySelectorAll("nav ul li a");
+
+menuItems.forEach(item => {
+    item.addEventListener("mouseenter", function () {
+        let submenu = this.nextElementSibling;
+        if (submenu && submenu.tagName === "UL") {
+            submenu.style.display = "block";
+        }
+    });
+});
+
+// Fecha os submenus ao clicar fora deles
+document.addEventListener("click", function (event) {
+    dropdowns.forEach(dropdown => {
+        if (!dropdown.contains(event.target) && !event.target.closest('#mostrar-categorias')) {
+            dropdown.style.display = "none";
+        }
     });
 
-    document.addEventListener("click", function (event) {
-        dropdowns.forEach(dropdown => {
-            if (!dropdown.contains(event.target)) {
-                dropdown.style.display = "none";
-            }
-        });
-    });
-
+    // Fecha o menu de categorias ao clicar fora dele
+    const listaCategorias = document.getElementById("lista-categorias");
+    if (!listaCategorias.contains(event.target) && !event.target.closest('#mostrar-categorias')) {
+        listaCategorias.style.display = "none";
+    }
+});
     // Dropdown do usuário
     let profileButton = document.querySelector("#profile-dropdown button");
     let profileMenu = document.querySelector(".dropdown-menu");
