@@ -18,7 +18,11 @@
               <li><a href="escrever.html">Escrever</a></li>
                 
 <li class="dropdown categoria-dropdown">
-  <button class="dropbtn">Fics por Categoria ▼</button>
+  <button id="mostrar-categorias">Fics por categoria▼</button>
+<div id="lista-categorias" style="display: none;">
+  <!-- categorias aqui -->
+</div>
+
   <ul>
     <li><a href="/categoria/aventura">Aventura</a></li>
     <li><a href="/categoria/romance">Romance</a></li>
@@ -94,7 +98,11 @@
     </footer>
 
     <script>
-document.addEventListener("DOMContentLoaded", function () {
+<script>
+document.getElementById("mostrar-categorias").addEventListener("click", function() {
+    const lista = document.getElementById("lista-categorias");
+    lista.style.display = lista.style.display === "none" ? "block" : "none";
+});
     // Dropdown do menu principal
     let dropdowns = document.querySelectorAll("nav ul li ul");
     let menuItems = document.querySelectorAll("nav ul li a");
