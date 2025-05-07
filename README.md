@@ -38,7 +38,7 @@ Você pode acessar o site em: [https://qzverso.github.io/Qzverso/login/](https:/
 
 ## Contribuindo
 
-Este projeto é pessoal, mas contribuições e feedbacks são sempre bem-vindos! Basta abrir uma *issue* ou *pull request*.
+Este projeto é pessoal de Amanda Andrade.
 
 ## Licença
 
