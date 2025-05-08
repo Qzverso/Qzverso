@@ -9,7 +9,7 @@
 <body>
     <header class="site-header">
     <div class="logo-container">
-        <img src="qzverso.jpg" alt="Logo Qzverso" class="logo" height="100" width="100">
+        <img src="qzverso.jpg" alt="Logo Qzverso" class="logo">
         <div class="titulo">
            <h1>Bem-vindo ao Qzverso</h1>
         <nav>
@@ -231,58 +231,60 @@ section {
 
 /* Responsividade */
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
 
-    .categoria-scroll {
-        flex-direction: column;
-        align-items: center;
-    }
+  nav ul li a {
+    width: 90%;
+    text-align: center;
+  }
 
-    .categoria-card {
-        max-width: 100%;
-        margin-bottom: 15px;
-    }
+  .categoria-scroll {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .categoria-lista {
-        display: block;
-        position: static;
-    }
-    /* Header com logo e título lado a lado */
-.site-header {
-  background-color: #aa0e7b;
-  padding: 20px;
-  text-align: center;
-  color: white;
-}
+  .categoria-card {
+    max-width: 90%;
+    margin-bottom: 15px;
+  }
 
-.logo-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap; /* Para responsividade */
-  gap: 20px;
-}
+  .categoria-lista {
+    display: block;
+    position: static;
+  }
 
-.logo {
-  width: 30px;
-  height: 30px;
-  border-radius: 10px;
-}
+  /* Header com logo e título lado a lado */
+  .site-header {
+    background-color: black; /* Corrige o fundo rosa */
+    padding: 20px 10px;
+    text-align: center;
+  }
 
-.titulo h1 {
-  font-size: 24px;
-  margin: 0;
-}
+  .logo-container {
+    flex-direction: column;
+    gap: 10px;
+  }
 
-.titulo p {
-  margin: 10px 0 0;
-  font-size: 16px;
-  color: #f0f0f0;
+  .logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .titulo h1 {
+    font-size: 20px;
+  }
+
+  .titulo p {
+    font-size: 14px;
+  }
 }
 img {
-  80px 80px
+  width: 80px;
+  height: 80px;
 }
 
 </style>
