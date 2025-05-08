@@ -20,20 +20,18 @@
     <li><a href="escrever.html">Escrever</a></li>
     <li><a href="perfil.html">Perfil</a></li>
     <li>
-                <select onchange="location.href=this.value">
-        <option disabled selected>Fics por categoria</option>
-                    <div id="lista-categorias" class="categoria-lista">
-                        <ul>
-                            <li><a href="/categoria/aventura">Aventura</a></li>
-                            <li><a href="/categoria/romance">Romance</a></li>
-                            <li><a href="/categoria/drama">Drama</a></li>
-                            <li><a href="/categoria/ficcao">Ficção Científica</a></li>
-                            <li><a href="/categoria/comedia">Comédia</a></li>
-                            <li><a href="/categoria/fantasia">Fantasia</a></li>
-                            <li><a href="/categoria/acao/misterio">Ação/Mistério</a></li>
-                        </ul>
-                    </div>
-                </li>
+              <li>
+  <select onchange="location.href=this.value">
+    <option disabled selected>Fics por categoria</option>
+    <option value="/categoria/aventura">Aventura</option>
+    <option value="/categoria/romance">Romance</option>
+    <option value="/categoria/drama">Drama</option>
+    <option value="/categoria/ficcao">Ficção Científica</option>
+    <option value="/categoria/comedia">Comédia</option>
+    <option value="/categoria/fantasia">Fantasia</option>
+    <option value="/categoria/acao/misterio">Ação/Mistério</option>
+  </select>
+</li>
             </ul>
         </nav>
     </header>
@@ -137,7 +135,7 @@ nav ul li:hover > a {
     background-color:hsl(318, 85%, 36%);
     border-radius: 10px;
 }
-    nav select {
+nav select {
     background-color: hsl(318, 85%, 36%);
     color: white;
     border: none;
@@ -147,9 +145,13 @@ nav ul li:hover > a {
     cursor: pointer;
     margin-left: 5px;
     appearance: none;
-    -webkit-appearance: none; /* Safari */
-    -moz-appearance: none;    /* Firefox */
-    text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='18' viewBox='0 0 24 24' width='18' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    padding-right: 30px;
 }
 
 nav select:focus {
