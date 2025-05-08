@@ -110,6 +110,9 @@ nav {
     background-color: hsl(0, 0%, 0%);
     padding: 10px 0;
 }
+    button::after, button::before {
+  content: none;
+}
 
 nav ul {
     list-style: none;
@@ -245,6 +248,12 @@ section {
   .categoria-scroll {
     flex-direction: column;
     align-items: center;
+  }
+    
+    .menu button,
+  .menu select {
+    width: 90%;
+    margin: 5px 0;
   }
 
   .categoria-card {
