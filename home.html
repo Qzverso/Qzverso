@@ -12,7 +12,7 @@
         <img src="qzverso.jpg" alt="Logo Qzverso" class="logo">
         <div class="titulo">
            <h1>Bem-vindo ao Qzverso</h1>
-        <<nav>
+        <nav>
   <ul>
     <li><a href="index.html">Home</a></li>
     <li><a href="qzverso.html">Qzverso</a></li>
@@ -129,7 +129,12 @@ nav ul li a {
     transition: 0.3s;
     background-color:hsl(318, 85%, 36%);
 }
-
+nav ul li a[href="perfil.html"] {
+    background-color: hsl(318, 85%, 36%) !important;
+    color: white !important;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
 nav ul li:hover > a {
     background-color:hsl(318, 85%, 36%);
     border-radius: 10px;
