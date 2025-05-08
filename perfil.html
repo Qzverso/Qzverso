@@ -39,7 +39,11 @@
                 <button type="submit">Salvar Perfil</button>
             </form>
         </section>
-
+        
+    <p id="mensagem-sucesso" style="color: lightgreen; text-align: center; display: none;">
+        Perfil salvo com sucesso!
+    </p>
+        
         <section class="historias">
             <h2>Suas Histórias</h2>
             <div class="historias-container">
@@ -68,6 +72,7 @@
     <div id="baloes"></div>
 
     <script>
+        
         document.addEventListener("DOMContentLoaded", function () {
             const fotoUpload = document.getElementById("foto-upload");
             const fotoPreview = document.getElementById("foto-preview");
@@ -96,7 +101,31 @@
                     reader.readAsDataURL(file);
                 }
             });
+document.getElementById("perfil-form").addEventListener("submit", function (e) {
+        e.preventDefault();
 
+        const nome = document.getElementById("nome").value;
+        const aniversario = document.getElementById("data-nascimento").value;
+        const bio = document.getElementById("bio").value;
+
+        if (nome && aniversario) {
+            const userData = { nome, aniversario, bio };
+            localStorage.setItem("userData", JSON.stringify(userData));
+
+            const mensagem = document.getElementById("mensagem-sucesso");
+            mensagem.style.display = "block";
+            setTimeout(() => mensagem.style.display = "none", 3000);
+        }
+    });
+
+    window.addEventListener("DOMContentLoaded", () => {
+        const dadosSalvos = JSON.parse(localStorage.getItem("userData"));
+        if (dadosSalvos) {
+            document.getElementById("nome").value = dadosSalvos.nome || "";
+            document.getElementById("data-nascimento").value = dadosSalvos.aniversario || "";
+            document.getElementById("bio").value = dadosSalvos.bio || "";
+        }
+    });
             // Salvar dados do perfil
             perfilForm.addEventListener("submit", function (event) {
                 event.preventDefault();
