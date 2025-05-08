@@ -12,15 +12,16 @@
         <img src="qzverso.jpg" alt="Logo Qzverso" class="logo">
         <div class="titulo">
            <h1>Bem-vindo ao Qzverso</h1>
-        <nav>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="qzverso.html">Qzverso</a></li>
-                <li><a href="emalta.html">Em Alta</a></li>
-                <li><a href="escrever.html">Escrever</a></li>
-
-                <li class="dropdown categoria-dropdown">
-                    <button id="mostrar-categorias">Fics por categoria▼</button>
+        <<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="qzverso.html">Qzverso</a></li>
+    <li><a href="emalta.html">Em Alta</a></li>
+    <li><a href="escrever.html">Escrever</a></li>
+    <li><a href="perfil.html">Perfil</a></li>
+    <li>
+                <select onchange="location.href=this.value">
+        <option disabled selected>Fics por categoria</option>
                     <div id="lista-categorias" class="categoria-lista">
                         <ul>
                             <li><a href="/categoria/aventura">Aventura</a></li>
@@ -76,10 +77,6 @@
             </div>
         </section>
 
-        <section id="Perfil">
-            <a href="perfil.html">
-                <button class="secondary">Perfil</button>
-            </a>
             <h2>Seu Perfil</h2>
             <p>Gerencie suas histórias e configurações.</p>
         </section>
@@ -139,6 +136,25 @@ nav ul li a {
 nav ul li:hover > a {
     background-color:hsl(318, 85%, 36%);
     border-radius: 10px;
+}
+    nav select {
+    background-color: hsl(318, 85%, 36%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 5px;
+    appearance: none;
+    -webkit-appearance: none; /* Safari */
+    -moz-appearance: none;    /* Firefox */
+    text-align: center;
+}
+
+nav select:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px white;
 }
 
 /* Dropdown de categorias */
