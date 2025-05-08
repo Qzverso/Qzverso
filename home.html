@@ -81,10 +81,46 @@
         <p>&copy; 2025 Qzverso. Todos os direitos reservados.</p>
     </footer>
 
-    <script src="script.js"></script>
-</body>
-</html>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    // Verifica a data de nascimento salva no localStorage
+    const userData = JSON.parse(localStorage.getItem("userData"));
 
+    if (userData && userData.aniversario) {
+        const hoje = new Date();
+        const aniversario = new Date(userData.aniversario);
+
+        // Verifica se o dia e o mês coincidem com o aniversário
+        if (
+            hoje.getDate() === aniversario.getDate() &&
+            hoje.getMonth() === aniversario.getMonth()
+        ) {
+            criarBaloes(); // Ativa animação
+        }
+    }
+            // Salvar no perfil.js ou onde coleta o aniversário:
+const aniversario = document.querySelector("#data-nascimento").value;
+localStorage.setItem("userData", JSON.stringify({ aniversario }));
+
+});
+
+function criarBaloes() {
+    for (let i = 0; i < 30; i++) {
+        const balao = document.createElement("div");
+        balao.classList.add("balao");
+        balao.style.left = `${Math.random() * 100}vw`;
+        balao.style.animationDuration = `${Math.random() * 2 + 3}s`;
+        document.body.appendChild(balao);
+
+        // Remover o balão após a animação
+        balao.addEventListener("animationend", () => balao.remove());
+    }
+}
+    </script>
+            
+</body>
+            
+</html>
 
 <style>
 /* Estilos gerais */
@@ -127,16 +163,20 @@ nav ul li a {
     transition: 0.3s;
     background-color:hsl(318, 85%, 36%);
 }
+    
+    /* Perfil!*/
 nav ul li a[href="perfil.html"] {
     background-color: hsl(318, 85%, 36%) !important;
     color: white !important;
     border-radius: 10px;
     padding: 10px 20px;
 }
+    
 nav ul li:hover > a {
     background-color:hsl(318, 85%, 36%);
     border-radius: 10px;
 }
+    
 nav select {
     background-color: hsl(318, 85%, 36%);
     color: white;
@@ -315,5 +355,30 @@ img {
   width: 80px;
   height: 80px;
 }
+
+/*animacoes*/
+.balao {
+    position: fixed;
+    bottom: -60px;
+    width: 30px;
+    height: 40px;
+    background-color: hsl(318, 85%, 70%);
+    border-radius: 50% 50% 50% 50%;
+    opacity: 0.8;
+    animation: subir ease-in;
+    z-index: 9999;
+}
+
+@keyframes subir {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-120vh) scale(0.5);
+        opacity: 0;
+    }
+}
+
 
 </style>
