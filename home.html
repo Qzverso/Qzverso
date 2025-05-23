@@ -22,12 +22,12 @@
     <select onchange="location.href=this.value">
     <option disabled selected>Fics por categoria</option>
     <option value="/categoria/aventura">Aventura</option>
-    <option value="/categoria/romance">Romance</option>
-    <option value="/categoria/drama">Drama</option>
-    <option value="/categoria/ficcao">Ficção Científica</option>
-    <option value="/categoria/comedia">Comédia</option>
-    <option value="/categoria/fantasia">Fantasia</option>
-    <option value="/categoria/acao/misterio">Ação/Mistério</option>
+    <option value="/categoria/romance">Ação/Mistério</option>
+    <option value="/categoria/drama">Comédia</option>
+    <option value="/categoria/ficcao">Drama</option>
+    <option value="/categoria/comedia">Fantasia</option>
+    <option value="/categoria/fantasia">Ficção Cientifica</option>
+    <option value="/categoria/acao/misterio">Romance</option>
   </select>
 </li>
   </ul>
@@ -50,27 +50,31 @@
                     </div>
                     <div class="categoria-card">
                         <img src="capa2.jpg" alt="Mistério">
-                        <p>Mistério</p>
+                        <p>Ação/Mistério</p>
                     </div>
                     <div class="categoria-card">
                         <img src="capa3.jpg" alt="Fantasia">
-                        <p>Fantasia</p>
+                        <p>Comédia</p>
                     </div>
                     <div class="categoria-card">
                         <img src="capa4.jpg" alt="Romance">
-                        <p>Romance</p>
+                        <p>Drama</p>
                     </div>
                     <div class="categoria-card">
                         <img src="capa5.jpg" alt="Ficção Científica">
-                        <p>Ficção Científica</p>
+                        <p>Fantasia</p>
                     </div>
                     <div class="categoria-card">
                         <img src="capa5.jpg" alt="Comédia">
-                        <p>Comédia</p>
+                        <p>Ficção Cientifica</p>
+                    </div>
+                      <div class="categoria-card">
+                        <img src="capa5.jpg" alt="Comédia">
+                        <p>Romance</p>
                     </div>
                 </div>
             </div>
-          
+            <section>
             <li><a href="perfil.html">Perfil</a></li> <!-- Sempre FORA DO SELECT -->   
             <h2>Seu Perfil</h2>
             <p>Gerencie seu perfil.</p>
@@ -165,7 +169,7 @@ nav ul li a {
 }
     
     /* Perfil!*/
-  button perfil {
+  button section {
   background-color: hsl(318, 85%, 36%); /* Cor de fundo */
   color: white; /* Cor do texto */
   border: none; /* Remove a borda */
