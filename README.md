@@ -39,7 +39,7 @@ https://github.com/Qzverso/Qzverso
 
 ## Contribuindo
 
-Este projeto é pessoal de Amanda Andrade.
+Este projeto é pessoal do Qzverso e Amanda Andrade.
 
 ## Licença
 
