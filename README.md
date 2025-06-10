@@ -32,7 +32,8 @@
 
 ## Como acessar
 
-Você pode acessar o site em: (https://qzverso.github.io/Qzverso/login/)](https://github.com/Qzverso/Qzverso)
+Você pode acessar o site em:
+https://github.com/Qzverso/Qzverso
 
 > Certifique-se de que todas as páginas estejam corretamente conectadas ao `index.html` da pasta `login`.
 
