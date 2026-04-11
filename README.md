@@ -47,4 +47,8 @@ Este projeto está licenciado sob a Licença MIT. Veja o arquivo `LICENSE` para 
 
 ---
 
-&copy; 2025 Qzverso. Todos os direitos reservados.
+&copy; 2026 Qzverso. Todos os direitos reservados.
+
+
+
+Falta fazer e estudar o DB (DataBase), puxar cada comando para a DB alinhar os comandos e estrutar cada coluna e 
